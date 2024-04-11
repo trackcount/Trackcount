@@ -7,13 +7,13 @@ setTimeout(function(){
 		var ch = document.getElementById("ch");
 		var vv = document.getElementById("viewvideos");
 		ch.style.display = "block";
-		vv.style.display = "block";
+		vv.style.display = "flex";
 
 		XMLHTTP.onreadystatechange = function(){
 			if(this.readyState == 4 && this.status == 200){
 				var ch = document.getElementById("ch");
 				ch.style.display = "block";
-				vv.style.display = "block";
+				vv.style.display = "flex";
 	     	}else{
 				var e = document.getElementById("erm");
 	    		e.style.display = "flex";
@@ -77,7 +77,7 @@ var sn = setInterval(function(){
 			document.getElementById("view_count").innerHTML = view_number;
 			document.getElementById("video_count").innerHTML = video_number;
 			ch.style.display = "block";
-			vv.style.display = "block";
+			vv.style.display = "flex";
 			e.style.display = "none";
 		}
 		if(this.status == 404){
