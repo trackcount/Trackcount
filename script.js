@@ -81,12 +81,12 @@ var sn = setInterval(function(){
 			e.style.display = "none";
 		}
 		if(this.status == 404){
-			setTimeout(function {
+			setTimeout(function(){
 				   clearInterval(sn);
 			           ch.style.display = "none";
 			           vv.style.display = "none";
 			           e.style.display = "flex";
-		}, 200);
+			}, 200)
 		}
 	}
 	
