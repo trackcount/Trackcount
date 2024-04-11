@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+	padding: 0px;
+	font-family: Roboto;
+	background: #09090d;
+}
+
+.odometer {
+	font-size: 140px;
+	font-weight: 700;
+	margin: 10px;
+}
+
+.odometer.viewc {
+	font-size: 50px !important;
+	font-weight: 700;
+	margin: 0px;
+}
+
+.cn {
+	font-size: 30px;
+	font-family: Roboto;
+	font-weight: 400;
+	margin: 20px;
+}
+
+.cnsc {
+	padding: 25px;
+	border-radius: 25px;
+	background: #171720;
+	color: white;
+	width: 80%;
+	margin: 20px;
+	display: none;
+	filter: drop-shadow(0px 0px 25px #0000007b);
+}
+
+.cnsct {
+	padding: 20px;
+	border-radius: 20px;
+	background: #171720;
+	color: white;
+	width: 40%;
+	margin: 20px;
+	filter: drop-shadow(0px 0px 25px #0000007b);
+}
+
+.countbtn {
+	width: 15%;
+	height: fit-content;
+	font-family: Roboto;
+	font-weight: 400;
+	color: white;
+	background-color: #ffffff15;
+	padding: 15px;
+	border: 0px;
+	border-radius: 50px;
+	filter: drop-shadow(0px 0px 25px #ffffff7b);
+	margin: 3px;
+}
+
+.countbtn:hover {
+	background-color: #ffffff22;
+}
+
+.countbtn:active {
+	background-color: #ffffff29;
+}
+
+.countinp {
+	width: 75%;
+	height: fit-content;
+	font-family: Roboto;
+	font-weight: 400;
+	color: white;
+	background-color: #ffffff15;
+	padding: 15px;
+	border: 0px;
+	border-radius: 50px;
+	outline-width: 0;
+	filter: drop-shadow(0px 0px 25px #ffffff7b);
+	margin: 3px;
+}
+
+.countinp:hover {
+	background-color: #ffffff22;
+}
+
+.footer {
+	color: #ffffff7b;
+	font-family: Roboto;
+	font-weight: 400;
+	margin: 3px;
+}
+
+.error {
+	width: 40%;
+	height: fit-content;
+	margin: 20px;
+	padding: 20px;
+	border-radius: 25px;
+	display: none;
+	background: #ea0f32;
+	align-items: center;
+    justify-content: center;
+}
+
+.banner {
+	width: 100%;
+	border-radius: 25px;
+	filter: blur(0px);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position-y: center;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	background-image: url(https://yt3.ggpht.com/a/default-user=s1280-k-no-rp-mo);
+}
+
+::-webkit-scrollbar {
+	width: 12px;
+	background-color: #171720;
+  }
+
+::-webkit-scrollbar-thumb {
+	background: #ffffff15;
+	border-radius: 50px;
+}
+
+.cnscv {
+	padding: 25px;
+	border-radius: 25px;
+	background: #171720;
+	color: white;
+	width: 100%;
+	display: block;
+	filter: drop-shadow(0px 0px 25px #0000007b);
+	text-align: left;
+}
+
+.view {
+	margin-right: 12px;
+}
+
+.vid {
+	margin-left: 12px;
+}
+
+.viewvideos {
+	width: 81%;
+	height: fit-content;
+	display: flex;
+}
+
+.footer2 {
+	margin: 3px;
+	font-size: 20px;
+}
