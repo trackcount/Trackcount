@@ -5,7 +5,7 @@ var XMLHTTP = new XMLHttpRequest();
 setTimeout(function(){
     if (channel !== null) {
 		var ch = document.getElementById("ch");
-		var vv = document.getElementById("vv");
+		var vv = document.getElementById("viewvideos");
 		ch.style.display = "block";
 		vv.style.display = "block";
 
@@ -62,7 +62,7 @@ var sn = setInterval(function(){
 	const urlParams = new URLSearchParams(window.location.search);
 	var e = document.getElementById("red");
 	var channel = urlParams.get('c');
-	var vv = document.getElementById("vv");
+	var vv = document.getElementById("viewvideos");
 	var ch = document.getElementById("ch");
 	var XMLHTTP = new XMLHttpRequest();
 	
