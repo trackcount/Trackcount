@@ -5,8 +5,7 @@ var XMLHTTP = new XMLHttpRequest();
 setTimeout(function(){
     if (channel !== null) {
 	        var ch = document.getElementById("ch");
-	        var vc = document.getElementById("vc");
-	        var vc2 = document.getElementById("vc2");
+	        var vc = document.getElementById("vv");
 	        ch.style.display = "block";
 	        vv.style.display = "flex";
 
