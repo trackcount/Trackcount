@@ -80,13 +80,13 @@ var sn = setInterval(function(){
 			e.style.display = "none";
 		}
 		if(this.status == 404){
-			var ch = document.getElementById("ch");
 			ch.style.display = "none";
-			var vv = document.getElementById("viewvideos");
 			vv.style.display = "none";
-			var e = document.getElementById("red");
 			e.style.display = "flex";
 			clearInterval(sn);
+			var ch = document.getElementById("ch");
+			var vv = document.getElementById("viewvideos");
+			var e = document.getElementById("red");
 		}
 	}
 	
