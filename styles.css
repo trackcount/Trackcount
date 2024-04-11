@@ -150,7 +150,7 @@ body {
 .viewvideos {
 	width: 81%;
 	height: fit-content;
-	display: flex;
+	display: none;
 }
 
 .footer2 {
