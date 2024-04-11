@@ -81,10 +81,10 @@ var sn = setInterval(function(){
 			e.style.display = "none";
 		}
 		if(this.status == 404){
+			clearInterval(sn);
 			ch.style.display = "none";
 			vv.style.display = "none";
 			e.style.display = "flex";
-			clearInterval(sn);
 		}
 	}
 	
