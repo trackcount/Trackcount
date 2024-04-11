@@ -5,7 +5,7 @@ var XMLHTTP = new XMLHttpRequest();
 setTimeout(function(){
     if (channel !== null) {
 	        var ch = document.getElementById("ch");
-	        var vc = document.getElementById("vv");
+	        var vv = document.getElementById("vv");
 	        ch.style.display = "block";
 	        vv.style.display = "flex";
 
@@ -80,13 +80,13 @@ var sn = setInterval(function(){
 			e.style.display = "none";
 		}
 		if(this.status == 404){
+			var ch = document.getElementById("ch");
+			var vv = document.getElementById("vv");
+			var e = document.getElementById("red");
 			ch.style.display = "none";
 			vv.style.display = "none";
 			e.style.display = "flex";
 			clearInterval(sn);
-			var ch = document.getElementById("ch");
-			var vv = document.getElementById("viewvideos");
-			var e = document.getElementById("red");
 		}
 	}
 	
