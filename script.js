@@ -5,9 +5,9 @@ var XMLHTTP = new XMLHttpRequest();
 setTimeout(function(){
     if (channel !== null) {
 		var ch = document.getElementById("ch");
+	        ch.style.display = "block";
 		var vv = document.getElementById("viewvideos");
-		ch.style.display = "block";
-		vv.style.display = "flex";
+	        vv.style.display = "flex";
 
 		XMLHTTP.onreadystatechange = function(){
 			if(this.readyState == 4 && this.status == 200){
