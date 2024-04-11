@@ -1,11 +1,11 @@
 const urlParams = new URLSearchParams(window.location.search);
 var channel = urlParams.get('c');
-var ch = document.getElementById("ch");
-var vv = document.getElementById("viewvideos");
 var XMLHTTP = new XMLHttpRequest();
 
 setTimeout(function(){
     if (channel !== null) {
+	        var ch = document.getElementById("ch");
+	        var vv = document.getElementById("viewvideos");
 	        ch.style.display = "block";
 	        vv.style.display = "flex";
 
