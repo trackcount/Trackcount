@@ -102,7 +102,7 @@ function search() {
 			var output = this.responseText;
 			output = JSON.parse(output);
 			var channel = output.items[0].id;
-			window.location.assign("file:///C:/Users/Callum/Documents/sub-count/index.html?c="+channel);
+			window.location.assign("https://ytcount.github.io/?c="+channel);
 		}
 		if(this.status == 404){
 			ch.style.display = "none";
