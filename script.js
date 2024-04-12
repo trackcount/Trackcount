@@ -51,6 +51,7 @@ XMLHTTP.onreadystatechange = function(){
 	if(this.status == 404){
 		ch.style.display = "none";
 		e.style.display = "flex";
+		vv.style.display = "none";
 		clearInterval(sn);
 	}
 }
@@ -115,7 +116,7 @@ function search() {
 			ch.style.display = "none";
 			document.getElementById("errtxt").innerHTML = "No channels found! Please try again later."
 			e.style.display = "flex";
-			vv.style.display = "flex";
+			vv.style.display = "none";
 			clearInterval(sn);
 		}
 	}
