@@ -15,7 +15,10 @@ setTimeout(function(){
 				vv.style.display = "flex";
 	     	}else{
 				var e = document.getElementById("red");
+				ch.style.display = "none";
+				vv.style.display = "none";
 				e.style.display = "flex";
+				document.getElementById("errtxt").innerHTML = "Channel either failed to load or doesn't exist. Please try again later."
 			}
 		}
 	}
@@ -86,6 +89,7 @@ var sn = setInterval(function(){
 			ch.style.display = "none";
 			vv.style.display = "none";
 			e.style.display = "flex";
+			document.getElementById("errtxt").innerHTML = "Channel either failed to load or doesn't exist. Please try again later."
 			clearInterval(sn);
 		}
 	}
@@ -107,7 +111,9 @@ function search() {
 			window.location.assign("https://ytcount.github.io/?c="+channel);
 		}
 		if(this.status == 404){
+			var e = document.getElementById("red");
 			ch.style.display = "none";
+			document.getElementById("errtxt").innerHTML = "No channels found! Please try again later."
 			e.style.display = "flex";
 			clearInterval(sn);
 		}
