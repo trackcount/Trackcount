@@ -115,6 +115,7 @@ function search() {
 			ch.style.display = "none";
 			document.getElementById("errtxt").innerHTML = "No channels found! Please try again later."
 			e.style.display = "flex";
+			vv.style.display = "flex";
 			clearInterval(sn);
 		}
 	}
