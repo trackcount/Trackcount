@@ -8,11 +8,15 @@
 	<script src="odometer.js"></script>
     </head>
     <body>
-	<center>
-        <form class="cnsct" autocomplete="off" onkeypress="return event.keyCode != 13">
-	        <input class="countinp" type="text" id="chn_id" placeholder="Search">
-	        <input class="countbtn" type="button" onclick="search()" value="Count">
-	    </form>
+	    <center>
+		    <form class="cnsct" autocomplete="off" onkeypress="return event.keyCode != 13">
+			    <input class="countinp" type="text" id="chn_id" placeholder="Search">
+			    <input class="countbtn" type="button" onclick="search()" value="Count">
+		    </form>
+		    <div id="red" class="error">
+			    <img src="img/error.png" width="60px" style="margin-right:15px;">
+			    <p style="font-weight: 400; font-family: Roboto; color: white;" id="errtxt">Channel either failed to load or doesn't exist. Please try again later.</p>
+		    </div>
 		<div class="cnsc" id="ch">
 			<div class="banner" id="channel_banner">
 				<div class="disableBlur"><img src="https://yt3.ggpht.com/a/default-user=s1280-k-no-rp-mo" id="channel_pfp" style="width:170px; filter: drop-shadow(0px 0px 13px #00000044); border-radius: 50%;"></div>
@@ -27,10 +31,6 @@
 			<p class="footer2">Subscribers</p>
 			<br>
 			<p class="footer"><i>(Channels with over 1,000 subs have an estimated sub count and are not entirely accurate.)</i></p>
-		</div>
-		<div id="red" class="error">
-			<img src="img/error.png" width="60px" style="margin-right:15px;">
-			<p style="font-weight: 400; font-family: Roboto; color: white;" id="errtxt">Channel either failed to load or doesn't exist. Please try again later.</p>
 		</div>
 		<div class="viewvideos" id="vv">
 			<div class="cnscv view" id="vc">
