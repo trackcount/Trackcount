@@ -36,6 +36,8 @@ XMLHTTP.onreadystatechange = function(){
 		var channel_pfp = output.items[0].snippet.thumbnails.high.url;
 		if (output.items[0].brandingSettings.image.bannerExternalUrl !== null) {
 			var channel_banner = output.items[0].brandingSettings.image.bannerExternalUrl;
+		}else{
+			var channel_banner = output.items[0].snippet.thumbnails.high.url;
 		}
 		if (channel_name == "") {
 			document.getElementById("channel_name").innerHTML = channel;
@@ -53,9 +55,7 @@ XMLHTTP.onreadystatechange = function(){
 			document.querySelector('title').textContent = channel_name + " - YouTube Livecount";
 		}
 		document.getElementById("channel_pfp").src = channel_pfp;
-		if (output.items[0].brandingSettings.image.bannerExternalUrl !== null) {
-			document.getElementById("channel_banner").style.backgroundImage = "url("+channel_banner+")";
-		}
+		document.getElementById("channel_banner").style.backgroundImage = "url("+channel_banner+")";
 	}
 	if(this.status == 404){
 		ch.style.display = "none";
