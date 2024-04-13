@@ -34,7 +34,7 @@ XMLHTTP.onreadystatechange = function(){
 		var channel_name = output.items[0].snippet.title;
 		var channel_handle = output.items[0].snippet.customUrl;
 		var channel_pfp = output.items[0].snippet.thumbnails.high.url;
-		if (output.items[0].brandingSettings.image.bannerExternalUrl !== null) {
+		if (output.items[0].brandingSettings.image == null) {
 			var channel_banner = output.items[0].brandingSettings.image.bannerExternalUrl;
 		}else{
 			var channel_banner = output.items[0].snippet.thumbnails.high.url;
