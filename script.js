@@ -106,7 +106,7 @@ var sn = setInterval(function(){
 	
 	XMLHTTP.open("GET" ,"https://api.socialcounts.org/youtube-live-subscriber-count/"+channel, true);
 	XMLHTTP.send()
-}, 1000
+}, 1500
 )}
 
 function search() {
