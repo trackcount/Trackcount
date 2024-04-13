@@ -1,6 +1,14 @@
 const urlParams = new URLSearchParams(window.location.search);
 var channel = urlParams.get('c');
 var XMLHTTP = new XMLHttpRequest();
+const form = document.querySelector('form');
+
+form.addEventListener('keypress', function (event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    form.submit();
+  }
+});
 
 setTimeout(function(){
     if (channel !== null) {
