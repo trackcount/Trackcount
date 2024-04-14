@@ -57,7 +57,7 @@ XMLHTTP.onreadystatechange = function(){
 		}else{
 			document.getElementById("channel_handle").innerHTML = channel_handle;
 		}
-		if (channel == null || channel == "") {
+		if (channel_name == null || channel_name == "") {
 			document.querySelector('title').textContent = "YouTube Livecount";
 		}else{
 			document.querySelector('title').textContent = channel_name + " - YouTube Livecount";
