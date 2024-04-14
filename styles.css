@@ -9,7 +9,7 @@ body {
 
 .odometer {
 	font-size: 7rem;
-	font-weight: 700;
+	font-weight: 800;
 	margin: 10px;
 }
 
@@ -22,7 +22,7 @@ body {
 .cn {
 	font-size: 30px;
 	font-family: Inter Tight;
-	font-weight: 400;
+	font-weight: 300;
 	margin: 20px;
 }
 
@@ -51,7 +51,7 @@ body {
 	width: 15%;
 	height: fit-content;
 	font-family: Inter Tight;
-	font-weight: 400;
+	font-weight: 300;
 	color: white;
 	background-color: #ffffff15;
 	padding: 15px;
@@ -73,7 +73,7 @@ body {
 	width: 75%;
 	height: fit-content;
 	font-family: Inter Tight;
-	font-weight: 400;
+	font-weight: 300;
 	color: white;
 	background-color: #ffffff15;
 	padding: 15px;
@@ -91,7 +91,7 @@ body {
 .footer {
 	color: #ffffff7b;
 	font-family: Inter Tight;
-	font-weight: 400;
+	font-weight: 300;
 	margin: 3px;
 }
 
