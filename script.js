@@ -126,7 +126,7 @@ function search() {
 			var output = this.responseText;
 			output = JSON.parse(output);
 			var channel = output.items[0].id;
-			window.location.assign("https://ytcount.github.io/?c="+channel);
+			window.location.assign("https://trackcount.github.io/?c="+channel);
 		}
 		if(this.status == 404){
 			var e = document.getElementById("red");
