@@ -23,7 +23,7 @@
     visibility: hidden;
   }
   .odometer.odometer-auto-theme .odometer-digit .odometer-digit-inner, .odometer.odometer-theme-minimal .odometer-digit .odometer-digit-inner {
-    text-align: left;
+    text-align: center;
     display: block;
     position: absolute;
     top: 0;
@@ -80,5 +80,5 @@
     transform: translateY(0);
   }
   .odometer .odometer-digit .odometer-value {
-    width: 100%;
+    width: 85%;
   }
