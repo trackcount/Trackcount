@@ -80,5 +80,6 @@
     transform: translateY(0);
   }
   .odometer .odometer-digit .odometer-value {
-    width: 90%;
+    width: 95%;
+    font-size: 115px;
   }
