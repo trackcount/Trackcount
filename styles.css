@@ -164,5 +164,5 @@ img#channel_pfp {
 	transition-duration: 1s;
 }
 img#channel_pfp:hover {
-	transform: size(1.05)
+	transform:scale(1.1)
 }
