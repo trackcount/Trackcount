@@ -159,3 +159,10 @@ body {
 	font-size: 20px;
 	font-weight: 300;
 }
+
+img#channel_pfp {
+	transition-duration: 1s;
+}
+img#channel_pfp:hover {
+	transform: size(1.05)
+}
