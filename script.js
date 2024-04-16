@@ -141,3 +141,7 @@ function search() {
 	XMLHTTP.open("GET" ,"https://api.socialcounts.org/youtube-live-subscriber-count/search/"+sch, true);
 	XMLHTTP.send()
 }
+
+function redirect() {
+	window.open("https://www.youtube.com/channel/" + channel)
+}
