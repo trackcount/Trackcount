@@ -58,9 +58,9 @@ XMLHTTP.onreadystatechange = function(){
 			document.getElementById("channel_handle").innerHTML = channel_handle;
 		}
 		if (channel_name == null || channel_name == "") {
-			document.querySelector('title').textContent = "YouTube Livecount";
+			document.querySelector('title').textContent = "Trackcount";
 		}else{
-			document.querySelector('title').textContent = channel_name + " - YouTube Livecount";
+			document.querySelector('title').textContent = channel_name + " - Trackcount";
 		}
 		document.getElementById("channel_pfp").src = channel_pfp;
 		document.getElementById("channel_banner").style.backgroundImage = "url("+channel_banner+")";
