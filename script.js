@@ -32,7 +32,48 @@ setTimeout(function(){
 	}
 }, 500);
 	
-XMLHTTP.open("GET" ,"https://mixerno.space/api/youtube-channel-counter/user/"+channel, true);
+XMLHTTP.open("GET" ,"https://api.socialcounts.org/youtube-live-subscriber-count/"+channel, true);
+XMLHTTP.send()
+
+XMLHTTP.onreadystatechange = function(){
+	if(this.status == 200){
+		var output = this.responseText;
+		output = JSON.parse(output);
+		var channel_name = output.items[0].snippet.title;
+		var channel_handle = output.items[0].snippet.customUrl;
+		var channel_pfp = output.items[0].snippet.thumbnails.high.url;
+		try{
+			var channel_banner = output.items[0].brandingSettings.image.bannerExternalUrl;
+		}catch{
+			var channel_banner = output.items[0].snippet.thumbnails.high.url;
+		}
+		if (channel_name == "") {
+			document.getElementById("channel_name").innerHTML = channel;
+		}else{
+			document.getElementById("channel_name").innerHTML = channel_name;
+		}
+		if (channel_handle == undefined) {
+			document.getElementById("channel_handle").innerHTML = "@" + channel;
+		}else{
+			document.getElementById("channel_handle").innerHTML = channel_handle;
+		}
+		if (channel_name == null || channel_name == "") {
+			document.querySelector('title').textContent = "Trackcount";
+		}else{
+			document.querySelector('title').textContent = channel_name + " - Trackcount";
+		}
+		document.getElementById("channel_pfp").src = channel_pfp;
+		document.getElementById("channel_banner").style.backgroundImage = "url("+channel_banner+")";
+	}
+	if(this.status == 404){
+		ch.style.display = "none";
+		e.style.display = "flex";
+		vv.style.display = "none";
+		clearInterval(sn);
+	}
+}
+
+XMLHTTP.open("GET" ,"https://www.googleapis.com/youtube/v3/channels?part=snippet,brandingSettings,statistics&id="+channel+"&key=AIzaSyBFEdIwNNsZ8GfX4PlIWxy06ObULpzwDgs", true);
 XMLHTTP.send()
 
 if (channel !== null) {
@@ -49,29 +90,9 @@ var sn = setInterval(function(){
 		if(this.status == 200){
 			var output = this.responseText;
 			output = JSON.parse(output);
-			var sub_number = output.counts[0].count;
-			var view_number = output.counts[3].count;
-			var video_number = output.counts[5].count;
-			var channel_name = output.user[0].count;
-			var channel_pfp = output.user[1].count;
-			try{
-				var channel_banner = output.user[2].count;
-			}catch{
-				var channel_banner = output.user[1].count;
-			}
-			if (channel_name == "") {
-				document.getElementById("channel_name").innerHTML = channel;
-			}else{
-				document.getElementById("channel_name").innerHTML = channel_name;
-			}
-			document.getElementById("channel_handle").innerHTML = "@" + channel;
-			if (channel_name == null || channel_name == "") {
-				document.querySelector('title').textContent = "Trackcount";
-			}else{
-				document.querySelector('title').textContent = "Trackcount - " + channel_name;
-			}
-			document.getElementById("channel_pfp").src = channel_pfp;
-			document.getElementById("channel_banner").style.backgroundImage = "url("+channel_banner+")";
+			var sub_number = output.est_sub;
+			var view_number = output.table[0].count;
+			var video_number = output.table[1].count;
 			document.getElementById("sub_count").innerHTML = sub_number;
 			document.getElementById("view_count").innerHTML = view_number;
 			document.getElementById("video_count").innerHTML = video_number;
@@ -91,7 +112,7 @@ var sn = setInterval(function(){
 		}
 	}
 	
-	XMLHTTP.open("GET" ,"https://mixerno.space/api/youtube-channel-counter/user/"+channel, true);
+	XMLHTTP.open("GET" ,"https://api.socialcounts.org/youtube-live-subscriber-count/"+channel, true);
 	XMLHTTP.send()
 }, 1500
 )}
@@ -104,7 +125,7 @@ function search() {
 		if(this.status == 200){
 			var output = this.responseText;
 			output = JSON.parse(output);
-			var channel = output.list[0][2];
+			var channel = output.items[0].id;
 			window.location.assign("https://trackcount.github.io/?c="+channel);
 		}
 		if(this.status == 404){
@@ -117,7 +138,7 @@ function search() {
 		}
 	}
 
-	XMLHTTP.open("GET" ,"https://mixerno.space/api/youtube-channel-counter/search/"+sch, true);
+	XMLHTTP.open("GET" ,"https://api.socialcounts.org/youtube-live-subscriber-count/search/"+sch, true);
 	XMLHTTP.send()
 }
 
