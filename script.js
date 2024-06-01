@@ -104,7 +104,7 @@ function search() {
 		if(this.status == 200){
 			var output = this.responseText;
 			output = JSON.parse(output);
-			var channel = output.list[0].[2];
+			var channel = output.list[0][2];
 			window.location.assign("https://trackcount.github.io/?c="+channel);
 		}
 		if(this.status == 404){
